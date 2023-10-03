@@ -14,4 +14,10 @@ public class SultanDines extends Restaurant{
 //    public void welcomeMessage() {
 //        System.out.println("Wellcome to sultanDines");
 //    }
+
+    public static void main(String[] args) {
+        SultanDines sultanDines = new SultanDines();
+        sultanDines.welcomeMessage();
+        sultanDines.menuName();
+    }
 }
