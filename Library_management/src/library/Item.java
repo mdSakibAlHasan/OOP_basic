@@ -8,18 +8,20 @@ import java.util.Random;
 
 public abstract class Item {
     private  boolean isCheckedOut;
-    private String itemId, title, category, authors, publishYear;
+    private String itemId, title, category, authors;
+    private int publishYear;
     private ArrayList<CheckOutRecord> chekOutRecords = new ArrayList<>();
 
-    public Item(String title,String  category,String authors, String publishYear){
+    public Item(String itemId,String title,String  category,String authors, int publishYear){
         this.title = title;
         this.category = category;
         this.authors = authors;
         this.publishYear = publishYear;
+        this.itemId = itemId;
 
         Random random = new Random();
         String randomNumber = String.format("%04d", random.nextInt(10000));
-        this.itemId = publishYear+"-"+randomNumber;
+        this.itemId += publishYear+"-"+randomNumber;
     }
 
     public void checkOut(String memberId) throws CheckedOutException{
@@ -88,7 +90,7 @@ public abstract class Item {
         return title;
     }
 
-    public String getPublishYear() {
+    public int getPublishYear() {
         return publishYear;
     }
 
