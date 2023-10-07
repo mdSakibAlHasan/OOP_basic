@@ -1,8 +1,9 @@
 package library;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Member {
+public class Member implements Serializable {
     String memberId, name;
     ArrayList<CheckOutRecord> chekOutRecords  = new ArrayList<>();
 

@@ -2,11 +2,12 @@ package library;
 
 import customExceptio.CheckedOutException;
 
+import java.io.Serializable;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Random;
 
-public abstract class Item {
+public abstract class Item implements Serializable {
     private  boolean isCheckedOut;
     private String itemId, title, category, authors;
     private int publishYear;

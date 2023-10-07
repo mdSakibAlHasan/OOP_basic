@@ -1,10 +1,11 @@
 package library;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
-public class CheckOutRecord {
+public class CheckOutRecord implements Serializable {
     private String memberId;
     private String itemId;
     private LocalDate checkOutDate, expectedCheckInDate, checkInDate;

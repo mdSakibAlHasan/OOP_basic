@@ -1,6 +1,8 @@
 package library;
 
-public class Publication extends Item{
+import java.io.Serializable;
+
+public class Publication extends Item implements Serializable {
     private String  publisherName;
     private boolean isJournalPaper;
 

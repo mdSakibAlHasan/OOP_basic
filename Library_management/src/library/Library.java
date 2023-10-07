@@ -111,4 +111,7 @@ public class Library implements Serializable {
         return matchItem.getCheckOutRecords();
     }
 
+    public ArrayList<Item> getItems() {
+        return items;
+    }
 }
