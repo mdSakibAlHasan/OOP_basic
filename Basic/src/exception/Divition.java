@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Divition {
     public static void main(String[] args) throws Exception {
 
-        File file = new File("exception/abc.txt");
+        File file = new File("src/exception/abc.txt");          //IOException
         Scanner sc = new Scanner(file);
         String s = sc.nextLine();
         System.out.println(s);
@@ -22,7 +22,7 @@ public class Divition {
             array[0] =2;
             array[1]=3;
             System.out.println("Before exception");
-            //array[2] = 4;
+            array[2] = 4;                           //ArrayIndexOutOfBoundsException Excepton
             System.out.println("after exception");
             Scanner abc = new Scanner(System.in);
             int ran = abc.nextInt();
@@ -41,18 +41,18 @@ public class Divition {
 
 
 //            Scanner input = new Scanner(System.in);
-//            int a = input.nextInt();
-//            int b = input.nextInt();
+//            double a = input.nextDouble();
+//            double b = input.nextDouble();
 //            if(b==0)
-//                throw new ArithmeticException("divide by zero");
+//                throw new ArithmeticException("divide by zero is not allow");     //arithmatic exception
 //            else
 //                System.out.println("Result is "+(a/b));
 
 
 
-//
-//
-//
-//        System.out.println("last");
+
+
+
+        System.out.println("last");
     }
 }
