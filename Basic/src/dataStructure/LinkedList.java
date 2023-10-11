@@ -1,88 +1,102 @@
 package dataStructure;
 
+import java.util.Scanner;
+
 public class LinkedList {
     Node head;
     static class Node{
-        String data;
+        int data;
         Node next;
-        public Node(String data){
+        public Node(int data){
             this.data = data;
             this.next =null;
         }
     }
 
-    public static void insertLast(LinkedList list, String data){
-        Node new_node = new Node(data);
 
-        if(list.head == null){
-            list.head = new_node;
-        }
-        else {
-            Node last_node = list.head;
-            while (last_node.next != null){
-                last_node = last_node.next;
+
+    public static void insertLast(LinkedList list){
+        System.out.print("Input your data: ");
+        Scanner scn = new Scanner(System.in);
+        int data = scn.nextInt();
+
+        Node new_node, ptr;
+        new_node = new Node(data);
+        new_node.next = null;
+        ptr = list.head;
+
+        if(ptr != null){
+            while (ptr.next != null){
+                ptr = ptr.next;
             }
-            last_node.next = new_node;
+            ptr.next = new_node;
+        }
+        else{
+            list.head = new_node;
         }
     }
 
-    public static void insertFirst(LinkedList list, String data){
-        Node new_node = new Node(data);
+    public static void insertFirst(LinkedList list){
+        System.out.print("Input your data: ");
+        Scanner scn = new Scanner(System.in);
+        int data = scn.nextInt();
 
-        if(list.head == null){
-            list.head = new_node;
-        }
-        else {
-
-            new_node.next = list.head;
-            list.head = new_node;
-
-        }
+        Node ptr = new Node(data);
+        ptr.next = list.head;
+        list.head = ptr;
+        //System.out.println(list.head.data);
     }
 
-    public static void insertAtSpecificIndex(LinkedList list, String data, int index){
-        Node new_node = new Node(data);
-        if(list.head == null){
-            list.head = new_node;
-        }
-        else {
-            Node last_node = list.head,before_node;
-           for(int i=0;last_node.next != null;i++){
-               before_node = last_node;
-                last_node = last_node.next;
-                if(i == index-1){
-                    before_node.next = new_node;
-                    new_node.next = last_node;
-                    return;
-                }
-            }
-            System.out.println("Index is not valid");
+    public static void insertAtSpecificIndex(LinkedList list){
+        System.out.print("Input your data: ");
+        Scanner scn = new Scanner(System.in);
+        int data = scn.nextInt();
+        System.out.println("Input info after you insert: ");
+        int info = scn.nextInt();
 
+        Node new_node, ptr;
+        new_node = new Node(data);
+        ptr = list.head;
+
+        while ( ptr != null && ptr.data != info ){
+            ptr = ptr.next;
+        }
+
+        if(ptr.data == info){
+            new_node.next = ptr.next;
+            ptr.next = new_node;
+        }else{
+            System.out.println("Invalid number");
         }
     }
 
     public static void deleteLast(LinkedList list){
+        Node ptr, prep=null;
         if(list.head == null){
             System.out.print("List is empty");
+        }else if(list.head.next == null ){
+            list.head = null;
         }
         else {
-            Node last_node = list.head, previous_node=null;
-            while (last_node.next != null){
-                previous_node = last_node;
-                last_node = last_node.next;
-            }
-            previous_node.next = null;
+           ptr = list.head;
+           while (ptr.next != null){
+               prep = ptr;
+               ptr = ptr.next;
+           }
+           prep.next = null;
+           ptr = null;
         }
     }
 
     public static void deleteFirst(LinkedList list){
+        Node ptr;
         if(list.head == null){
-            System.out.println("List is empty");
+            System.out.println("List is already empty");
         }
         else {
-            Node second_node = list.head.next;
-            list.head = second_node;
-
+            ptr = list.head;
+            list.head = list.head.next;
+            ptr = null;
         }
     }
 
@@ -108,49 +122,56 @@ public class LinkedList {
 
 
     public static void printList(LinkedList list){
+        if(list.head == null){
+            System.out.println("List is empty");
+            return;
+        }
+        System.out.print("List is: ");
         Node head = list.head;
         System.out.print(head.data+" ");
         while (head.next != null){
             head = head.next;
             System.out.print(head.data+" ");
         }
+        System.out.println("");
     }
 
 
 
     public static void main(String[] args) {
-        System.out.println("This list add at first");
+        System.out.println("*******Main Menue**********");
+        int option=0;
         LinkedList list = new LinkedList();
-        LinkedList.insertFirst(list,"Rice");
-        LinkedList.insertFirst(list,"Vegitable");
-        LinkedList.insertFirst(list,"abc");
-        LinkedList.insertFirst(list,"def");
-        LinkedList.insertFirst(list,"as");
-        LinkedList.printList(list);
+        while(option != -1) {
+            System.out.println("Chocse one option");
+            System.out.println("1.Insert at first \n 2.Insert at Last \n 3.delete from first \n 4.delete from last \n 5.view list \n6.Inster at specific" +
+                    " \n -1.exit");
 
-        System.out.println("/n This list add lass:");
-        LinkedList list2 = new LinkedList();
-        LinkedList.insertLast(list2,"rice");
-        LinkedList.insertLast(list2,"vegitable");
-        LinkedList.insertLast(list2,"birani");
-        LinkedList.insertLast(list2,"abc");
-        LinkedList.insertLast(list2,"def");
-        LinkedList.printList(list2);
-        LinkedList.insertAtSpecificIndex(list2,"kacci",2);
-        System.out.println("");
-        LinkedList.printList(list2);
-        LinkedList.deleteAtSpecificIndex(list2,2);
-        System.out.println("");
-        LinkedList.printList(list2);
-        
-//        LinkedList.deleteLast(list2);
-//        System.out.println("");
-//        LinkedList.printList(list2);
-//
-//        LinkedList.deleteFirst(list2);
-//        System.out.println("");
-//        LinkedList.printList(list2);
+            Scanner sc = new Scanner(System.in);
+            option = sc.nextInt();
 
+            switch (option) {
+                case 1:
+                    LinkedList.insertFirst(list);
+                    break;
+                case 2:
+                    LinkedList.insertLast(list);
+                    break;
+                case 3:
+                    LinkedList.deleteFirst(list);
+                    break;
+                case 4:
+                    LinkedList.deleteLast(list);
+                    break;
+                case 6:
+                    LinkedList.insertAtSpecificIndex(list);
+                    break;
+                case 5:
+                    LinkedList.printList(list);
+                    break;
+
+            }
+        }
 
 
     }
