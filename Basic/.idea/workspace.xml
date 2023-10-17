@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f37111e-d400-42b8-ab72-25232aae5697" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Personal Website/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Personal Website/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Personal Website/projects/gan.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Personal Website/projects/ml.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Personal Website/projects/musicplayer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Personal Website/projects/recommender.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Personal Website/projects/resume.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Personal Website/projects/vdg.html" beforeDir="false" />
-    </list>
+    <list default="true" id="3f37111e-d400-42b8-ab72-25232aae5697" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +36,7 @@
     &quot;last_opened_file_path&quot;: &quot;F:/OOP_basic/Basic&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.LinkedList">
+  <component name="RunManager" selected="Application.ReadWrite">
     <configuration name="Divition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="exception.Divition" />
       <module name="tiutorial" />
@@ -60,19 +52,6 @@
     </configuration>
     <configuration name="FileRead" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="exception.FileRead" />
-      <module name="tiutorial" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="exception.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HighestAge" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exception.HighestAge" />
       <module name="tiutorial" />
       <extension name="coverage">
         <pattern>
@@ -110,13 +89,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReadWrite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="inputOutput.ReadWrite" />
+      <module name="tiutorial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="inputOutput.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ReadWrite" />
         <item itemvalue="Application.LinkedList" />
         <item itemvalue="Application.RangeCode" />
         <item itemvalue="Application.FileRead" />
         <item itemvalue="Application.Divition" />
-        <item itemvalue="Application.HighestAge" />
       </list>
     </recent_temporary>
   </component>
