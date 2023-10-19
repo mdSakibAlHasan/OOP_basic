@@ -1,4 +1,4 @@
-package com.example.smaple;
+package com.example.project;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

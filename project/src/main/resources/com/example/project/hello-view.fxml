@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="285.0" prefWidth="404.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label alignment="TOP_CENTER" layoutX="20.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="150.0" text="Input your mark" textFill="#0786f5">
+      <font>
+         <Font size="18.0" />
+      </font></Label>
+   <TextField fx:id="textField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#textFieldController" onKeyTyped="#textFieldController" onMouseClicked="#textFieldController" prefHeight="47.0" prefWidth="119.0" />
+    <Button onAction="#onHelloButtonClick" text="See your grade" />
+   <Label fx:id="inputLabel" prefHeight="45.0" prefWidth="210.0">
+      <font>
+         <Font name="System Bold Italic" size="18.0" />
+      </font>
+   </Label>
+</VBox>
