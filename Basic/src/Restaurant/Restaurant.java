@@ -10,6 +10,8 @@ public abstract class Restaurant {
 
     public abstract void menuName();
 
+    //public abstract int getNoOfMusics();
+
     public void welcomeMessage(){
         System.out.println("Welcome to our restaurant");
     }

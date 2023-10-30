@@ -7,13 +7,9 @@ public class ThreadClass implements Runnable {
     }
     @Override
     public void run() {
-        for(int i=0;i<10;i++){
+        for(int i=0;i<100;i++){
             System.out.println(i+". This is call from "+message);
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+            //Thread.sleep(3000);
 
         }
     }
@@ -26,10 +22,10 @@ class Main{
 
         thread1.start();
         //Thread.sleep(3000);
-        thread1.join();
+        //thread1.join();
         thread2.start();
 
-        for (int i=0;i<10;i++){
+        for (int i=0;i<100;i++){
             System.out.println(i+". This is from main class");
             //Thread.sleep(3000);
         }

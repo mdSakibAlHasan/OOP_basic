@@ -3,8 +3,8 @@ package abstraction;
 public class Circle implements Shape{
     private double radius;
 
-    public Circle(double radius){           //constuctor
-        this.radius = radius;
+    public Circle(double r){           //constuctor
+        radius = r;
     }
 
     @Override
@@ -12,6 +12,12 @@ public class Circle implements Shape{
         double area = 3.1416*radius*radius;
         return area;
     }
+
+
+    public void areaCalculate(double r){
+        return;
+    }
+
 
 //    @Override
 //    public void printDetails(String message){
