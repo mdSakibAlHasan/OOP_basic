@@ -9,29 +9,36 @@ import java.util.Scanner;
 
 
 public class Divition {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)  {
 
-        File file = new File("src/exception/abc.txt");          //IOException
-        Scanner sc = new Scanner(file);
-        String s = sc.nextLine();
-        System.out.println(s);
+
         try{
+            try {
+                File file = new File("src/exception/abc.txt");          //IOException
+                Scanner sc = new Scanner(file);
+                String s = sc.nextLine();
+                System.out.println(s);
 
 
-            int[] array= new   int[2];
-            array[0] =2;
-            array[1]=3;
-            System.out.println("Before exception");
-            array[2] = 4;                           //ArrayIndexOutOfBoundsException Excepton
-            System.out.println("after exception");
-            Scanner abc = new Scanner(System.in);
-            int ran = abc.nextInt();
+
+                int[] array= new   int[2];
+                array[0] =2;
+                array[1]=3;
+                System.out.println("Before exception");
+                array[2] = 4;                           //ArrayIndexOutOfBoundsException Excepton
+                System.out.println("after exception");
+                Scanner abc = new Scanner(System.in);
+                int ran = abc.nextInt();
+
+            }catch (IOException e){
+                System.out.println("handle");
+            }
 
 
 //            if(ran>100)
 //                throw new NumberLimit("Number should be less than 100");
 //            System.out.println("GCD: hsfhbskjv");
-        }catch (Exception be){
+        }catch (ArrayIndexOutOfBoundsException be){
             System.out.println(be);
         }finally {
             System.out.println("Final block executed");
