@@ -39,13 +39,13 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Car" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Question.Car" />
+  <component name="RunManager" selected="Application.CT.CheckArray">
+    <configuration name="CT.CheckArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CT.CheckArray" />
       <module name="tiutorial" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Question.*" />
+          <option name="PATTERN" value="CT.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -53,12 +53,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DoublyLinkList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dataStructure.DoublyLinkList" />
+    <configuration name="Car" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Question.Car" />
       <module name="tiutorial" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dataStructure.*" />
+          <option name="PATTERN" value="Question.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,11 +107,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CT.CheckArray" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Car" />
         <item itemvalue="Application.Final" />
         <item itemvalue="Application.FileRead" />
-        <item itemvalue="Application.DoublyLinkList" />
       </list>
     </recent_temporary>
   </component>
